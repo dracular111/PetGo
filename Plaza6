@@ -76,7 +76,7 @@ getgenv().petsGoConfig = {
     SELL_SCROLL_PERCENTAGE = 1,
 
 
-    MAIL_GEMS_USERNAME = "under1xa",  -- Empty = Disabled Gem Mail
+    MAIL_GEMS_USERNAME = "kite5h2",  -- Empty = Disabled Gem Mail
     MAIL_GEMS_MIN = 20000000,  -- Minimum gems required to send
 }
 
