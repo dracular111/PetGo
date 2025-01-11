@@ -4,7 +4,7 @@ script_key="JFYWUQZdFmKRFkZkmCmApiONbswJYjar";
 -- Config with "SELL_PERCENTAGE" -> 1 = 100% RAP, 1.1 = 110% RAP, 0.8 = 80% RAP, , 0.85 = 85% RAP (Any Amount)
 getgenv().petsGoConfig = {
     DISCORD_ID = "1318777726223646721",
-    PLAZA_WEBHOOK_URL = "https://discord.com/api/webhooks/1327644087481794631/DG3sfXdOua9vAPDWfuf3KGQEOTVN6FyKtLrXPcMrd2R5cEKbBhfO7aaJnga2gaPEhvVl",
+    PLAZA_WEBHOOK_URL = "https://discord.com/api/webhooks/1327676377801031710/vWYaJP3aO7zd-I3P8G_I8HpoG2FXrAXOM3P3TeXPVqcHp-6rZ2X5UZSVqLn8RPC9r2Bx",
     MAIL_GEM_WEBHOOK_URL = "https://discord.com/api/webhooks/1327644388326768710/fG6JRQUUOMY441Pdxjkk-FNVzgxXPFcaWE0_Cy7YXZMitGQnygOjJ_JCueWje6ssFd4o",
 
     -- Plaza hop delay will reset if someone purchase something.
