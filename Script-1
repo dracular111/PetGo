@@ -1,0 +1,14 @@
+task.wait(1)
+-- Kiểm tra biến toàn cục để xác định script đã chạy hay chưa
+if _G.SCRIPT1 then
+    warn("Script đã được chạy trước đó!")
+    return -- Dừng script nếu đã chạy
+end
+
+-- Đánh dấu script đã được chạy
+_G.SCRIPT1 = true
+
+-- Script của bạn
+task.wait(2)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/Pet99pro/main/Daycare"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/Pet99pro/main/Del-CoreGui"))()
