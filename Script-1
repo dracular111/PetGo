@@ -9,6 +9,4 @@ end
 _G.SCRIPT1 = true
 
 -- Script của bạn
-task.wait(2)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/Pet99pro/main/Daycare"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/Pet99pro/main/Del-CoreGui"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/Del-coregui"))()
