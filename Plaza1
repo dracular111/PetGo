@@ -52,7 +52,7 @@ getgenv().petsGoConfig = {
 
     SELL_BAIT = true,  -- true/false, enable selling exclusive fishing bait
     SELL_BAIT_MIN = 10, 
-    SELL_BAIT_PERCENTAGE = 1,  
+    SELL_BAIT_PERCENTAGE = 0.9,  
 
     SELL_CHEST = true,  -- true/false
     SELL_CHEST_MIN = 10, 
