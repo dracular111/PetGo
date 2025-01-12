@@ -33,47 +33,47 @@ getgenv().petsGoConfig = {
 
     SELL_POTION = true,  -- true/false (only sell insta luck 4)
     SELL_POTION_MIN = 10,  -- [Doesn't apply to God Potion (Default MIN 1)]
-    SELL_POTION_PERCENTAGE = 1,  
+    SELL_POTION_PERCENTAGE = 0.95,  
 
     SELL_GOD_POTION = true,  -- true/false
-    SELL_GOD_POTION_PERCENTAGE = 0.98,  
+    SELL_GOD_POTION_PERCENTAGE = 0.95,  
 
     SELL_EGG = true,  -- true/false
     SELL_HUGE_EGG = true, -- true/false
     SELL_HYPE_EGG = true, -- true/false
     SELL_EGG_MIN = 5,  -- [Doesn't apply to Huge/Hype Egg (Default MIN 1)]
-    SELL_EGG_PERCENTAGE = 1,   
+    SELL_EGG_PERCENTAGE = 0.95,   
 
     SELL_KEY = true,  -- true/false, enable selling crystal/secret keys
     SELL_KEY_MIN = 5,
-    SELL_KEY_PERCENTAGE = 1,  
+    SELL_KEY_PERCENTAGE = 0.95,  
     SELL_KEY_LOWER = true,  -- true/false, enable selling lower crystal key
     SELL_KEY_UPPER = false,  -- true/false, enable selling upper crystal key
 
     SELL_BAIT = true,  -- true/false, enable selling exclusive fishing bait
     SELL_BAIT_MIN = 10, 
-    SELL_BAIT_PERCENTAGE = 1,  
+    SELL_BAIT_PERCENTAGE = 0.92,  
 
     SELL_CHEST = true,  -- true/false
     SELL_CHEST_MIN = 10, 
-    SELL_CHEST_PERCENTAGE = 1,  
+    SELL_CHEST_PERCENTAGE = 0.95,  
 
     SELL_ENCHANT_SAFE = true,  -- true/false
     SELL_ENCHANT_SAFE_MIN = 5, 
-    SELL_ENCHANT_SAFE_PERCENTAGE = 1,  
+    SELL_ENCHANT_SAFE_PERCENTAGE = 0.95,  
 
     SELL_GIFT_BAG = true,  -- true/false, enable selling exclusive treasure chest
     SELL_GIFT_BAG_MIN = 1, 
-    SELL_GIFT_BAG_PERCENTAGE = 1,  
+    SELL_GIFT_BAG_PERCENTAGE = 0.95,  
 
     SELL_FISHING_ROD = true,  -- true/false, enable selling fishing rods
-    SELL_FISHING_ROD_PERCENTAGE = 1,
+    SELL_FISHING_ROD_PERCENTAGE = 0.95,
 
     SELL_PICKAXE = true,
-    SELL_PICKAXE_PERCENTAGE = 0.96,
+    SELL_PICKAXE_PERCENTAGE = 0.95,
 
     SELL_SCROLL = true,
-    SELL_SCROLL_PERCENTAGE = 1,
+    SELL_SCROLL_PERCENTAGE = 0.95,
 
 
     MAIL_GEMS_USERNAME = "untru6ci",  -- Empty = Disabled Gem Mail
