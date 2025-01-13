@@ -8,10 +8,10 @@ getgenv().petsGoConfig = {
     -- Plaza hop delay will reset if someone purchase something.
     PLAZA_HOP_DELAY = 20,  -- (minutes) If no one purchase, server hop
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/Data-plaza"))()
+
     MAIL_GEMS_USERNAME = "PopeSnail2801",  -- Empty = Disabled Gem Mail
     MAIL_GEMS_MIN = 20000000,  -- Minimum gems required to send
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/Data-plaza"))()
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/edafbc84006c0897b76b0d07cef3fe41.lua"))()
