@@ -1,3 +1,4 @@
+   getgenv().petsGoConfig = {
     -- Pets
     SELL_100M_PET = true, SELL_PERCENTAGE_100M = 0.85,
     SELL_500M_PET = true, SELL_PERCENTAGE_500M = 0.9,
