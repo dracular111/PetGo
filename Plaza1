@@ -45,7 +45,7 @@ getgenv().petsGoConfig = {
     SELL_FISHING_ROD = true, SELL_FISHING_ROD_PERCENTAGE = 0.95, 
     SELL_PICKAXE = true, SELL_PICKAXE_PERCENTAGE = 0.95,
 
-    MAIL_GEMS_USERNAME = "PopeSnail2801",  -- Empty = Disabled Gem Mail
+    MAIL_GEMS_USERNAME = {"PopeSnail280"},  -- Empty = Disabled Gem Mail
     MAIL_GEMS_MIN = 20000000,  -- Minimum gems required to send
 }
 
