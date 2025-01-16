@@ -1,0 +1,21 @@
+getgenv().petsGoConfig = {
+    DISCORD_ID = "1318777726223646721",
+    AMOUNT_OF_GEMS_TO_SEND = 287000,
+    MAIL_UPGRADE_GEM_WEBHOOK_URL = "https://discord.com/api/webhooks/1329509600441143316/hIuahXEpDZa4s0E7bdSby9jb9Hnr0y1kOfwg7yBJBaE3PHBvWcmwCd6Bj6FUABxgim1U",
+
+    MAIL_GEMS_USERNAME_LIST = {
+        
+    }  -- ONE TIME 287k GEMS MAIL FOR FULL DIAMOND UPGRADE
+
+    --  Example Usage:
+    --  MAIL_GEMS_USERNAME_LIST = {
+    --      "chapm8un",
+    --      "engel8uu",
+    --      "sigh_6mx",
+    --      "showe_9ko",
+    --      "sigh_6mx",
+    --      "stein_3nm"
+    --  }
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1fcefa454021976ebb3a7ad670dfb077.lua"))()
