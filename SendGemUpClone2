@@ -1,3 +1,4 @@
+task.wait(10)
 getgenv().gemsend = "287k"
 getgenv().url =
 "https://discord.com/api/webhooks/1328377579521966181/jF03ZUCXb0ASaXK9TePuB5YLkffjTzFCI1-iHlZgvt2Yyk8OQgQX5jIk96o5K4lyXMJF"
@@ -6,49 +7,7 @@ getgenv().account = {
     "engel8uu",
     "sigh_6mx",
     "showe_9ko",
-    "stein_3nm",
-    "helst3im",
-    "horkm4u6",
-    "totah_4x5",
-    "hurow_9t8",
-    "thatc1vc",
-    "harbo8xt",
-    "deggs5ac",
-    "esdai6ts",
-    "chask8zk",
-    "ludov4uz",
-    "rezni_5im",
-    "legas7t4",
-    "mcvic24w",
-    "linde4x4",
-    "poepp2xe",
-    "heral_61u",
-    "sokol5ku",
-    "llore49i",
-    "wakin_2cb",
-    "poyne3xn",
-    "ormon3zt",
-    "teite7u7",
-    "leuze_8id",
-    "riche45m",
-    "lovin3mz",
-    "FreemanMeredith06",
-    "McneilRandall7",
-    "SimsMargaret3",
-    "CaseyMorgan619",
-    "OlsonVernon3337",
-    "TrevinoLindsey73",
-    "WaltonTiffany04",
-    "OneillLaurie2",
-    "FryeChristine8",
-    "PachecoMarco84",
-    "LamBrendan147",
-    "BurnettIsaac99",
-    "BradyJesse0327",
-    "MullinsTyler447",
-    "AbbottGeorge8",
-    "BakerJoann596",
-    "ZhangJanet820"
+    "stein_3nm"
 }
 
 repeat
