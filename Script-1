@@ -9,19 +9,17 @@ end
 _G.SCRIPT1 = true
 
 -- Script của bạn
-repeat task.wait() until game:IsLoaded()
-if not game:IsLoaded() then game:IsLoaded():Wait(5) end
-local UserInputService = game:GetService("UserInputService")
-local RunService = game:GetService("RunService")
+wait(45)
+setfpscap(5)
+print("Đã set fpscap thành 5!")
 
-local WindowFocusReleasedFunction = function()
-    RunService:Set3dRenderingEnabled(false)
-    setfpscap(5)
-    return
-end
+ -- Tính thời gian kể từ khi set fpscap thành 5
+local startTime = tick()  -- Lấy thời gian bắt đầu
+local oneHourElapsed = false
+local twoHoursElapsed = false
 
-local WindowFocusedFunction = function()
-    RunService:Set3dRenderingEnabled(true)
-    setfpscap(5)
-    return
-end
+-- Sau khi set fpscap thành 5, kiểm tra lại mỗi 1 giây
+while true do
+    task.wait(1)
+
+    local currentFpsCap = getfpscap()
