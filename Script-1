@@ -12,14 +12,3 @@ _G.SCRIPT1 = true
 wait(45)
 setfpscap(5)
 print("Đã set fpscap thành 5!")
-
- -- Tính thời gian kể từ khi set fpscap thành 5
-local startTime = tick()  -- Lấy thời gian bắt đầu
-local oneHourElapsed = false
-local twoHoursElapsed = false
-
--- Sau khi set fpscap thành 5, kiểm tra lại mỗi 1 giây
-while true do
-    task.wait(1)
-
-    local currentFpsCap = getfpscap()
