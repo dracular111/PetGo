@@ -9,3 +9,4 @@ end
 _G.SCRIPT1 = true
 
 -- Script của bạn
+setfpscap(5)
