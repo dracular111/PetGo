@@ -9,6 +9,3 @@ end
 _G.SCRIPT1 = true
 
 -- Script của bạn
-wait(45)
-setfpscap(5)
-print("Đã set fpscap thành 5!")
