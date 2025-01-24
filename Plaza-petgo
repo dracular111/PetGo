@@ -8,8 +8,7 @@ getgenv().petsGoConfig = {
     -- Plaza hop delay will reset if someone purchase something.
     PLAZA_HOP_DELAY = 20,  -- (minutes) If no one purchase, server hop
     BOOTH_RESET_DELAY = 10,  -- (minutes) force reset booth (Reset RAP Prices)
-    AVOID_USERNAME = {"HodgeTylert17", "BlakeGarfieldf450", "HuangAlexanderj99", "BeardArthurh04", "FoxLaurenb8645", "NolanKimberlyr60", "SanchezJuniperf12", "RyanLilacj3804", "MontesMistyr009", "HaynesJoannes0518", "MeltonValeried6905", "MahoganyAngelicaq462",
-"HaynesBrucem393", "CollinsCynthiar714", "ShafferDustinz8336", "JonesJocelynq86", "BellKrystalm26", "HowardJoel246", "ValenciaSergion5931", "RichJosephz371"},  -- serverhop when it finds username
+    AVOID_USERNAME = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2"},  -- serverhop when it finds username
     
     -- Pets
     SELL_100M_PET = true, SELL_PERCENTAGE_100M = 0.7,
@@ -31,7 +30,7 @@ getgenv().petsGoConfig = {
 
     -- Eggs
     -- SELL_EGG_MIN : [Doesn't apply to Huge/Hype Egg (Default MIN 1)]
-    SELL_EGG = true, SELL_EGG_MIN = 5, SELL_EGG_PERCENTAGE = 0.85,
+    SELL_EGG = true, SELL_EGG_MIN = 5, SELL_EGG_PERCENTAGE = 0.9,
     SELL_HUGE_EGG = true, -- true/false
     SELL_HYPE_EGG = true, -- true/false
     
@@ -44,7 +43,7 @@ getgenv().petsGoConfig = {
     SELL_FISHING_ROD = true, SELL_FISHING_ROD_PERCENTAGE = 0.95, 
     SELL_PICKAXE = true, SELL_PICKAXE_PERCENTAGE = 0.95,
 
-    MAIL_GEMS_USERNAME = {"PopeSnail2801", "thirt8ik"},  -- Empty = Disabled Gem Mail
+    MAIL_GEMS_USERNAME = {"PopeSnail2801", "thirt8ik", "HarrisonGlenn84"},  -- Empty = Disabled Gem Mail
     MAIL_GEMS_MIN = 20000000,  -- Minimum gems required to send
 }
 
