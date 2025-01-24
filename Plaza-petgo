@@ -45,7 +45,7 @@ getgenv().petsGoConfig = {
     SELL_PICKAXE = true, SELL_PICKAXE_PERCENTAGE = 0.95,
 
     MAIL_GEMS_USERNAME = {"PopeSnail2801", "thirt8ik"},  -- Empty = Disabled Gem Mail
-    MAIL_GEMS_MIN = 10000000,  -- Minimum gems required to send
+    MAIL_GEMS_MIN = 20000000,  -- Minimum gems required to send
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/edafbc84006c0897b76b0d07cef3fe41.lua"))()
