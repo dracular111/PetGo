@@ -1,0 +1,93 @@
+getgenv().gemsend = "20000k"
+getgenv().url =
+"https://discord.com/api/webhooks/1328357657152585799/QXtF0pUNsDLdhNRPUFN2QsfhEzAEwfCAxjdDi0JxNVHW818kxhKZkqg9PilVPan3Gt8N"
+getgenv().account = {
+    "PopeSnail2801",
+    "thirt8ik"
+}
+
+repeat
+    wait()
+until game:IsLoaded() and game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui") and game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUIFX Holder") and
+    game:GetService("Players").LocalPlayer.PlayerGui["GUIFX Holder"].DisplayOrder == 999
+local rs = game:GetService("ReplicatedStorage")
+local save = require(rs.Library.Client.Save)
+local Items = require(game:GetService("ReplicatedStorage").Library.Items.Types)
+local plr = game.Players.LocalPlayer
+local RAP = 0
+local a = require(game:GetService("ReplicatedStorage").Library.Directory.Pets)
+
+local VirtualUser = game:service "VirtualUser"
+game:service("Players").LocalPlayer.Idled:connect(
+    function()
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new())
+    end
+)
+function sendstatus(name, gem)
+    local Message = {
+        ["content"] = "UserName: " .. name .. "\nSend Done: " .. gem
+    }
+    local DataCallBack = request({
+        Url = getgenv().url,
+        Method = 'POST',
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = game:GetService("HttpService"):JSONEncode(Message)
+    })
+end
+
+local v0 = {
+    k = "e3",
+    m = "e6",
+    b = "e9",
+    t = "e12",
+    q = "e15"
+};
+ParseNumberSmart = function(v1)
+    if type(v1) == "string" then
+        v1 = v1:gsub("[,%s%c%z]", "");
+        if #v1 > 0 then
+            local v2 = v0[v1:sub(#v1):lower()];
+            if v2 then
+                v1 = v1:sub(1, #v1 - 1) .. v2;
+            end;
+        end;
+    end;
+    return (tonumber(v1));
+end;
+function updatediamond()
+    local diamondold = 0
+    for i, v in pairs(save.Get().Inventory.Currency) do
+        if v.id == "Diamonds" and v._am then
+            diamondold = v._am
+        end
+    end
+    return diamondold
+end
+
+local diamond = updatediamond()
+
+for i, v in pairs(save.Get().Inventory.Currency) do
+    if v.id == "Diamonds" and v._am >= ParseNumberSmart(getgenv().gemsend) then
+        for i1, v1 in next, getgenv().account do
+            local args = {
+                [1] = v1,
+                [2] = "Send Gem",
+                [3] = "Currency",
+                [4] = tostring(i),
+                [5] = ParseNumberSmart(getgenv().gemsend)
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send")
+                :InvokeServer(
+                    unpack(args))
+            wait()
+            if (updatediamond() < diamond) then
+                sendstatus(v1, math.abs(updatediamond() - diamond))
+                wait(1)
+                diamond = updatediamond()
+            end
+        end
+    end
+end
