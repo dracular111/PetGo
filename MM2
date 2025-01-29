@@ -22,7 +22,21 @@ getgenv().petsGoConfig = {
     MAILING = true,  -- Auto mail
     MAIL_FISHING_ROD = true,  -- true = mail, false = keep fishing rod on account (FASTER Fishing)
     MAIL_WEBHOOK_ODDS = 1000000000, -- Minimum Pet Odds To Trigger MAIL Webhook
-    MAIL_PET_ODDS = 1000000000,  -- Minimum Pet Odds To Mail
+    MAIL_GEMS_MIN = 1,  -- Minimum Gems to mail out
+
+    MIN_MAIL_AMOUNT = {  -- Rare items not listed, default min 1
+      -- General
+      INSTA_POTION_IV = 5,
+      CORRUPTED_HUGE_BAIT = 20,
+      CRYSTAL_KEY = 5, CRYSTAL_KEY_UPPER_HALF = 20, CRYSTAL_KEY_LOWER_HALF = 20,
+      EXCLUSIVE_TREASURE_CHEST = 5, ABYSSAL_TREASURE_CHEST = 5,
+      CELESTIAL_MINING_CHEST = 5, RUNIC_MINING_CHEST = 5,
+      CELESTIAL_ENCHANT_SAFE = 1,
+      -- Event
+      HUGE_CHARGE_TOKEN = 10, TITANIC_CHARGE_TOKEN = 5,
+      EVENT_GIFT_BAG = 5,
+    }, 
+
     USERNAME_TO_MAIL = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw"} -- Mail to username, Example : USERNAME_TO_MAIL = {"username1", "username2"}
 }
 
