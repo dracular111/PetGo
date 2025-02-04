@@ -1,6 +1,6 @@
 getgenv().Setting = {
     ["Account Send"] = { "PopeSnail2801" },
-    ["Min Gem To Send"] = "50m",
+    ["Min Gem To Send"] = "20m",
     ["Rap Huge"] = 60,
     ["Rap Key Lower"] = 80,
     ["Rap Key Upper"] = 80,
