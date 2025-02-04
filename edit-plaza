@@ -3,7 +3,6 @@ getgenv().Setting = {
     ["Min Gem To Send"] = "20m",
     ["Rap Huge"] = 60,
     ["Rap Key Lower"] = 35,
-    ["Rap Key Upper"] = 500,
     ["Rap Key"] = 95,
     ["Skip Pet"] = {
         "Queen Slime",
@@ -231,29 +230,6 @@ if game.PlaceId == 19006211286 then
             local petRAP = petItem:GetRAP() or 0
             if petRAP ~= 0 then
                 if v.id == "Crystal Key Lower Half" then
-                    if v._am and v._am <= 5000 then
-                        local args = {
-                            [1] = tostring(i),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
-                            [3] = v._am or 1
-                        }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(
-                                unpack(args)
-                            )
-                    else
-                        local args = {
-                            [1] = tostring(i),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
-                            [3] = 5000
-                        }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(
-                                unpack(args)
-                            )
-                    end
-                end
-                if v.id == "Crystal Key Upper Half" then
                     if v._am and v._am <= 5000 then
                         local args = {
                             [1] = tostring(i),
