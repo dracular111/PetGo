@@ -3,6 +3,7 @@ getgenv().Setting = {
     ["Min Gem To Send"] = "20m",
     ["Rap Huge"] = 60,
     ["Rap Key Lower"] = 30,
+    ["Rap Key Upper"] = 0,
     ["Rap Key"] = 95,
     ["Skip Pet"] = {
         "Queen Slime",
