@@ -3,6 +3,11 @@ getgenv().Setting = {
     ["Min Gem To Send"] = "50m",
     ["Url Webhook"] =
     "https://discord.com/api/webhooks/1336358658791051427/e7AlUb4LPd-Nee9xYoCoY2TFza_lhXIVYqhOzs7p0N8XfnFLPeW1hV54LgfAdlvNaHK-",
+    ["Rap Pet Normal"] = 70,
+    ["Skip Pet"] = {}, -- Nhap pet kh muon ban
+    ["Rap Huge"] = 55,
+    ["Rap Key Lower"] = 30,
+    ["Time to remove item booth"] = 3 -- Minutes
 }
 getgenv().data = {
     ["2m"] = "1k",
@@ -66,24 +71,208 @@ local function loggem(user, gem)
     })
 end
 
-spawn(function()
-    while wait() do
-        for i, v in pairs(save.Get().Inventory.Currency) do
-            if v.id == "Diamonds" and v._am >= ParseNumberSmart(getgenv().Setting["Min Gem To Send"]) then
-                local args = {
-                    [1] = getgenv().Setting["Account Send"][math.random(1, #getgenv().Setting["Account Send"])],
-                    [2] = "Send Gem",
-                    [3] = "Currency",
-                    [4] = tostring(i),
-                    [5] = v._am
-                }
-                if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send")
-                    :InvokeServer(
-                        unpack(args)) then
-                    loggem(getgenv().Setting["Account Send"][math.random(1, #getgenv().Setting["Account Send"])],
-                        formatNumber(v._am))
+function havebooth()
+    for i, v in next, workspace.__THINGS.Booths:GetChildren() do
+        if v:GetAttribute("Owner") == plr.UserId then
+            return true
+        end
+    end
+end
+
+if game.PlaceId == 19006211286 then
+    spawn(function()
+        while wait() do
+            for i, v in pairs(save.Get().Inventory.Currency) do
+                if v.id == "Diamonds" and v._am >= ParseNumberSmart(getgenv().Setting["Min Gem To Send"]) then
+                    local args = {
+                        [1] = getgenv().Setting["Account Send"][math.random(1, #getgenv().Setting["Account Send"])],
+                        [2] = "Send Gem",
+                        [3] = "Currency",
+                        [4] = tostring(i),
+                        [5] = v._am
+                    }
+                    if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send")
+                        :InvokeServer(
+                            unpack(args)) then
+                        loggem(getgenv().Setting["Account Send"][math.random(1, #getgenv().Setting["Account Send"])],
+                            formatNumber(v._am))
+                    end
+                end
+            end
+        end
+    end)
+    wait(1)
+    repeat wait() until havebooth()
+    for i, v in next, workspace.__THINGS.Booths:GetChildren() do
+        if v:GetAttribute("Owner") == plr.UserId then
+            for i1, v1 in next, v.Pets.BoothTop.PetScroll:GetChildren() do
+                if v1:IsA("Frame") then
+                    local args = {
+                        [1] = v1.Name
+                    }
+
+                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_RemoveListing")
+                        :InvokeServer(
+                            unpack(args))
                 end
             end
         end
     end
-end)
+    spawn(function()
+        while wait(getgenv().Setting["Time to remove item booth"] * 60) do
+            for i, v in next, workspace.__THINGS.Booths:GetChildren() do
+                if v:GetAttribute("Owner") == plr.UserId then
+                    for i1, v1 in next, v.Pets.BoothTop.PetScroll:GetChildren() do
+                        if v1:IsA("Frame") then
+                            local args = {
+                                [1] = v1.Name
+                            }
+
+                            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild(
+                                "Booths_RemoveListing")
+                                :InvokeServer(
+                                    unpack(args))
+                        end
+                    end
+                end
+            end
+        end
+    end)
+
+    while wait() do
+        --//huge
+        for uid, petData in save.Get().Inventory.Pet do
+            if string.find(petData.id, "Huge") and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
+                local petItem = Items.Types["Pet"]:Get(uid)
+
+                local petRAP = petItem:GetRAP() or 0
+                if (tonumber(petRAP) > 1000) and petData.sh then
+                    local args = {
+                        [1] = tostring(uid),
+                        [2] = math.floor(petRAP * (getgenv().Setting["Rap Huge"] / 100)),
+                        [3] = petData._am or 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                        :InvokeServer(
+                            unpack(args)
+                        )
+                    wait(1)
+                else
+                    if savepet[petData.id] and savepet[petData.id].Rate and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
+                        local args = {
+                            [1] = tostring(uid),
+                            [2] = tonumber(savepet[petData.id].Rate),
+                            [3] = petData._am or 1
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                        wait(1)
+                    end
+                end
+            end
+        end
+        wait(1)
+        for i, v in save.Get().Inventory.Misc do
+            local petItem = Items.Types["Misc"]:Get(i)
+            local petRAP = petItem:GetRAP() or 0
+            if petRAP ~= 0 then
+                if v.id == "Crystal Key Lower Half" then
+                    if v._am and v._am <= 5000 then
+                        local args = {
+                            [1] = tostring(i),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [3] = v._am or 1
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                    else
+                        local args = {
+                            [1] = tostring(i),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [3] = 5000
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                    end
+                end
+              
+                if v.id == "Crystal Key" then
+                    if v._am and v._am <= 5000 then
+                        local args = {
+                            [1] = tostring(i),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [3] = v._am or 1
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                    else
+                        local args = {
+                            [1] = tostring(i),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [3] = 5000
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                    end
+                end
+            end
+        end
+       
+        wait(1)
+        --//not huge
+        local pets = {}
+
+        for uid, petData in pairs(a) do
+            for i1, v1 in pairs(save.Get().Inventory.Pet) do
+                if not string.find(petData._id, "Huge") and tonumber(petData.difficulty) and tonumber(petData.difficulty) >= 1000000 and petData._id == v1.id then
+                    table.insert(pets, { uid = i1, petData = petData, Amount = v1._am or 1 })
+                end
+            end
+        end
+
+        table.sort(pets, function(a, b)
+            return a.petData.difficulty > b.petData.difficulty
+        end)
+
+
+        for i, pet in ipairs(pets) do
+            local petData = pet.petData
+            local uid = pet.uid
+            local petItem = Items.Types["Pet"]:Get(uid)
+            local petRAP = petItem:GetRAP() or 0
+            if pet.sh then
+                if tonumber(petRAP) > 0 and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
+                    local args = {
+                        [1] = tostring(uid),
+                        [2] = math.floor(petRAP * (getgenv().Setting["Rap Pet Normal"] / 100)),
+                        [3] = petData._am or 1
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                        :InvokeServer(unpack(args))
+                    wait(1)
+                else
+                    if savepet[petData.id] and savepet[petData.id].Rate and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
+                        local args = {
+                            [1] = tostring(uid),
+                            [2] = tonumber(savepet[petData.id].Rate),
+                            [3] = petData._am or 1
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args))
+                        wait(1)
+                    end
+                end
+            end
+        end
+    end
+end
