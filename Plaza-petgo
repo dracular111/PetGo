@@ -47,7 +47,7 @@ getgenv().petsGoConfig = {
     -- Event
     SELL_CHARGE_TOKEN = true, SELL_CHARGE_TOKEN_MIN = 5, SELL_CHARGE_TOKEN_PERCENTAGE = 0.85,
 
-    MAIL_GEMS_USERNAME = {"PopeSnail2801", "untru6ci", "repay_4bx"},  -- Empty = Disabled Gem Mail 1% fee
+    MAIL_GEMS_USERNAME = {""},  -- Empty = Disabled Gem Mail 1% fee
     MAIL_GEMS_MIN = 50000000,  -- Minimum gems required to send 
 }
 
