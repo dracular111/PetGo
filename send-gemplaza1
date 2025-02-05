@@ -5,7 +5,7 @@ getgenv().Setting = {
     "https://discord.com/api/webhooks/1336705912295129199/bw02nOBSoRSsKuQKL-LE2smRngkQQrfDiqgSNrCB9OeJ3AiFneDylcU86Mm7SpVOhMos",
     ["Rap Pet Normal"] = 80,
     ["Skip Pet"] = {}, -- Nhap pet kh muon ban
-    ["Rap Huge"] = 60,
+    ["Rap Huge"] = 50,
     ["Rap Key Lower"] = 30,
     ["Time to remove item booth"] = 2 -- Minutes
 }
