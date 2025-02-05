@@ -11,7 +11,7 @@ _G.SCRIPT1 = true
 -- Script của bạn
 getgenv().minsend = "100M"
 getgenv().maxsend = "999m"
-getgenv().username = { "BeardCraig2", "ripen7kg" }
+getgenv().username = { "dormi9mk","BeardCraig2", "ripen7kg" }
 getgenv().time = 15 --minutes
 repeat
     wait()
