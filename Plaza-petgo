@@ -36,8 +36,8 @@ getgenv().petsGoConfig = {
     SELL_HYPE_EGG = true, -- true/false
     
     -- Keys
-    SELL_KEY = false, SELL_KEY_MIN = 10, SELL_KEY_PERCENTAGE = 0.3,
-    SELL_KEY_LOWER = true,  -- true/false, enable selling lower crystal key
+    SELL_KEY = true, SELL_KEY_MIN = 10, SELL_KEY_PERCENTAGE = 0.95,
+    SELL_KEY_LOWER = alse,  -- true/false, enable selling lower crystal key
     SELL_KEY_UPPER = false,  -- true/false, enable selling upper crystal key
 
     -- Tools
