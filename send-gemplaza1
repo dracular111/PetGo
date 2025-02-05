@@ -1,6 +1,6 @@
 getgenv().Setting = {
     ["Account Send"] = { "PopeSnail2801", "repay_4bx", "untru6ci" },
-    ["Min Gem To Send"] = "50m",
+    ["Min Gem To Send"] = "10m",
     ["Url Webhook"] =
     "https://discord.com/api/webhooks/1336705912295129199/bw02nOBSoRSsKuQKL-LE2smRngkQQrfDiqgSNrCB9OeJ3AiFneDylcU86Mm7SpVOhMos",
     ["Rap Pet Normal"] = 80,
