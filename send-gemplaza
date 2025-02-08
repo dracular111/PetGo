@@ -5,7 +5,7 @@ getgenv().Setting = {
     "https://discord.com/api/webhooks/1336358658791051427/e7AlUb4LPd-Nee9xYoCoY2TFza_lhXIVYqhOzs7p0N8XfnFLPeW1hV54LgfAdlvNaHK-",
     ["Rap Pet Normal"] = 70,
     ["Skip Pet"] = {}, -- Nhap pet kh muon ban
-    ["Rap Huge"] = 55,
+    ["Rap Huge"] = 50,
     ["Rap Key Lower"] = 30,
     ["Custom Item"] = {
         ["Cupids Egg"] = 75,
