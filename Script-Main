@@ -1,6 +1,6 @@
 --- Script 1 ---
 task.wait(1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/Script-1"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/Script-1"))()
 --- Script 2 ---
 task.wait(1)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/Script-2"))()
