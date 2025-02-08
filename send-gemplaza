@@ -12,6 +12,9 @@ getgenv().Setting = {
         ["Huge Egg"] = 90,
         ["Hype Egg"] = 95,
         ["Magma Egg"] = 90,
+        ["Rainbow Boardgame Dice"] = 90,
+        ["Golden Boardgame Dice"] = 90,
+        ["Board Game Speed Potion"] = 70
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
