@@ -36,7 +36,7 @@ getgenv().Setting = {
             ["Sell"] = true
         },
     },
-    ["Time to remove item booth"] = 15 -- Minutes
+    ["Time to remove item booth"] = 5 -- Minutes
 }
 getgenv().data = {
     ["2m"] = "1k",
