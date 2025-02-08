@@ -16,24 +16,30 @@ getgenv().Setting = {
         ["Cupids Egg"] = {
             ["RAP"] = 70,
             ["Sell"] = true,
+        },
         ["Huge Egg"] = {
             ["RAP"] = 90,
             ["Sell"] = true,
+        },
         ["Hype Egg"] = {
             ["RAP"] = 95,
             ["Sell"] = true,
+        },
         ["Magma Egg"] = {
             ["RAP"] = 90,
             ["Sell"] = true,
+        },
         ["Rainbow Boardgame Dice"] = {
             ["RAP"] = 90,
             ["Sell"] = true,
+        },
         ["Golden Boardgame Dice"] = {
             ["RAP"] = 85,
             ["Sell"] = true,
+        },
         ["Boardgame Speed Potion"] = {
             ["RAP"] = 70,
-            ["Sell"] = true
+            ["Sell"] = true,
         },
     },
     ["Time to remove item booth"] = 5 -- Minutes
