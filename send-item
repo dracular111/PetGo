@@ -1,13 +1,16 @@
 getgenv().data = {
     ["Item"] = {
-        ["Golden Boardgame Dice"] = 20,
+        ["Golden Boardgame Dice"]  = 20,
         ["Rainbow Boardgame Dice"] = 5,
-        ["Boardgame Speed Potion"] = 50
+        ["Boardgame Speed Potion"] = 20,
+        ["Cupid Corgi"]            = 1
     },
     ["UserName"] = {
-        "MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw"
+        "MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik",
+        "unlov5xi", "jovia_3cw"
     },
-    ["Url Webhook"] = "https://discord.com/api/webhooks/1337684621189714083/FM3jPHn3Pq763RSXFP2El9KAULAomNHt_T4wfK6ilyj6FelI20Q9Oo4iUsa6C_SSRf1t"
+    ["Url Webhook"] =
+    "https://discord.com/api/webhooks/1337684621189714083/FM3jPHn3Pq763RSXFP2El9KAULAomNHt_T4wfK6ilyj6FelI20Q9Oo4iUsa6C_SSRf1t"
 }
 repeat
     wait()
@@ -42,19 +45,20 @@ while wait() do
     for i, v in save.Get().Inventory do
         for i1, v1 in next, v do
             if getgenv().data["Item"][v1.id] then
-                if v1._am and v1._am >= getgenv().data["Item"][v1.id] then
+                local am = v1._am or 1
+                if am and am >= getgenv().data["Item"][v1.id] then
                     local username = getgenv().data["UserName"][math.random(1, #getgenv().data["UserName"])]
                     local args = {
                         [1] = username,
                         [2] = "Made by honglamx",
                         [3] = i,
                         [4] = i1,
-                        [5] = v1._am
+                        [5] = am
                     }
 
                     if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(
                             unpack(args)) then
-                        log(username, v1.id, v1._am)
+                        log(username, v1.id, am)
                         task.wait(1)
                     end
                 end
