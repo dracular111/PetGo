@@ -31,7 +31,7 @@ getgenv().Setting = {
         ["Golden Boardgame Dice"] = {
             ["RAP"] = 85,
             ["Sell"] = true,
-        ["Board Game Speed Potion"] = {
+        ["Boardgame Speed Potion"] = {
             ["RAP"] = 70,
             ["Sell"] = true
         },
