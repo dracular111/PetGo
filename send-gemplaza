@@ -21,7 +21,7 @@ getgenv().Setting = {
         ["Golden Boardgame Dice"] = 80,
         ["Boardgame Speed Potion"] = 50
     },
-    ["Time to remove item booth"] = 15 -- Minutes
+    ["Time to remove item booth"] = 5 -- Minutes
 }
 getgenv().data = {
     ["2m"] = "1k",
