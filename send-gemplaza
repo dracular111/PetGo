@@ -7,6 +7,12 @@ getgenv().Setting = {
     ["Skip Pet"] = {}, -- Nhap pet kh muon ban
     ["Rap Huge"] = 55,
     ["Rap Key Lower"] = 30,
+    ["Custom Item"] = {
+        ["Cupids Egg"] = 70,
+        ["Huge Egg"] = 90,
+        ["Hype Egg"] = 95,
+        ["Magma Egg"] = 90,
+    },
     ["Time to remove item booth"] = 5 -- Minutes
 }
 getgenv().data = {
@@ -201,7 +207,7 @@ if game.PlaceId == 19006211286 then
                             )
                     end
                 end
-              
+
                 if v.id == "Crystal Key" then
                     if v._am and v._am <= 5000 then
                         local args = {
@@ -227,8 +233,39 @@ if game.PlaceId == 19006211286 then
                 end
             end
         end
-       
+
         wait(1)
+        for i, v in save.Get().Inventory do
+            for i1, v1 in next, v do
+                if getgenv().Setting["Custom Item"][v1.id] then
+                    local petItem = Items.Types[i]:Get(i1)
+                    local petRAP = petItem:GetRAP() or 0
+                    if v1._am and v1._am <= 5000 then
+                        local args = {
+                            [1] = tostring(i1),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)),
+                            [3] = v1._am or 1
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild(
+                            "Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                    else
+                        local args = {
+                            [1] = tostring(i1),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)),
+                            [3] = 5000
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild(
+                            "Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                    end
+                end
+            end
+        end
         --//not huge
         local pets = {}
 
