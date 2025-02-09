@@ -1,13 +1,26 @@
 getgenv().Setting = {
     ["Account Send"] = { "PopeSnail2801", "repay_4bx", "untru6ci" },
-    ["Min Gem To Send"] = "10m",
+    ["Min Gem To Send"] = "50m",
     ["Url Webhook"] =
-    "https://discord.com/api/webhooks/1336705912295129199/bw02nOBSoRSsKuQKL-LE2smRngkQQrfDiqgSNrCB9OeJ3AiFneDylcU86Mm7SpVOhMos",
-    ["Rap Pet Normal"] = 80,
+    "https://discord.com/api/webhooks/1336670668443357234/y44-m8F64OZOre5EfdCVaHg9K4SMh0gDeQuNS2T8aalI7x8dd8YieaVx6jbIu3KCwhA-",
+    ["Sell Huge"] = true,
+    ["Sell Pet Normal"] = false,
+    ["Sell Lower Key"] = false,
+    ["Sell Crystal Key"] = true,
+    ["Rap Pet Normal"] = 90,
     ["Skip Pet"] = {}, -- Nhap pet kh muon ban
-    ["Rap Huge"] = 55,
+    ["Rap Huge"] = 50,
     ["Rap Key Lower"] = 30,
-    ["Time to remove item booth"] = 3 -- Minutes
+    ["Rap Crystal Key"] = 95,
+    ["Custom Item"] = {
+        ["Cupids Egg"] = 70,
+        ["Huge Egg"] = 90,
+        ["Hype Egg"] = 95,
+        ["Magma Egg"] = 90,
+        ["Rainbow Boardgame Dice"] = 75,
+        ["Golden Boardgame Dice"] = 75,
+    },
+    ["Time to remove item booth"] = 5 -- Minutes
 }
 getgenv().data = {
     ["2m"] = "1k",
@@ -142,7 +155,7 @@ if game.PlaceId == 19006211286 then
     while wait() do
         --//huge
         for uid, petData in save.Get().Inventory.Pet do
-            if string.find(petData.id, "Huge") and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
+            if string.find(petData.id, "Huge") and not table.find(getgenv().Setting["Skip Pet"], petData.id) and getgenv().Setting["Sell Huge"] then
                 local petItem = Items.Types["Pet"]:Get(uid)
 
                 local petRAP = petItem:GetRAP() or 0
@@ -178,7 +191,7 @@ if game.PlaceId == 19006211286 then
             local petItem = Items.Types["Misc"]:Get(i)
             local petRAP = petItem:GetRAP() or 0
             if petRAP ~= 0 then
-                if v.id == "Crystal Key Lower Half" then
+                if v.id == "Crystal Key Lower Half" and getgenv().Setting["Sell Lower Key"] then
                     if v._am and v._am <= 5000 then
                         local args = {
                             [1] = tostring(i),
@@ -201,12 +214,12 @@ if game.PlaceId == 19006211286 then
                             )
                     end
                 end
-              
-                if v.id == "Crystal Key" then
+
+                if v.id == "Crystal Key" and getgenv().Setting["Sell Crystal Key"] then
                     if v._am and v._am <= 5000 then
                         local args = {
                             [1] = tostring(i),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Crystal Key"] / 100)),
                             [3] = v._am or 1
                         }
                         game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
@@ -216,7 +229,7 @@ if game.PlaceId == 19006211286 then
                     else
                         local args = {
                             [1] = tostring(i),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Crystal Key"] / 100)),
                             [3] = 5000
                         }
                         game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
@@ -227,7 +240,37 @@ if game.PlaceId == 19006211286 then
                 end
             end
         end
-       
+        for i, v in save.Get().Inventory do
+            for i1, v1 in next, v do
+                if table.find(getgenv().Setting["Custom Item"], v1.id) then
+                    local petItem = Items.Types[i]:Get(i1)
+                    local petRAP = petItem:GetRAP() or 0
+                    if v1._am and v1._am <= 5000 then
+                        local args = {
+                            [1] = tostring(i1),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)),
+                            [3] = v1._am or 1
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild(
+                            "Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                    else
+                        local args = {
+                            [1] = tostring(i1),
+                            [2] = math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)),
+                            [3] = 5000
+                        }
+                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild(
+                            "Booths_CreateListing")
+                            :InvokeServer(
+                                unpack(args)
+                            )
+                    end
+                end
+            end
+        end
         wait(1)
         --//not huge
         local pets = {}
@@ -251,7 +294,7 @@ if game.PlaceId == 19006211286 then
             local petItem = Items.Types["Pet"]:Get(uid)
             local petRAP = petItem:GetRAP() or 0
             if pet.sh then
-                if tonumber(petRAP) > 0 and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
+                if tonumber(petRAP) > 0 and not table.find(getgenv().Setting["Skip Pet"], petData.id) and getgenv().Setting["Sell Pet Normal"] then
                     local args = {
                         [1] = tostring(uid),
                         [2] = math.floor(petRAP * (getgenv().Setting["Rap Pet Normal"] / 100)),
