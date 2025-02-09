@@ -2,7 +2,7 @@ getgenv().data = {
     ["Item"] = {
         ["Golden Boardgame Dice"]  = 20,
         ["Rainbow Boardgame Dice"] = 5,
-        ["Boardgame Speed Potion"] = 500,
+        ["-Boardgame Speed Potion"] = 500,
         ["Valentines Present"] = 1,
         ["Cupid Corgi"]            = 1
     },
