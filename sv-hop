@@ -1,4 +1,4 @@
-getgenv().timehop = 0.5 -- Minutes
+getgenv().timehop = 120 -- Minutes
 repeat
     wait()
 until game:IsLoaded() and game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui") and game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUIFX Holder") and
