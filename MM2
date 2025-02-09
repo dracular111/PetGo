@@ -14,7 +14,6 @@ getgenv().petsGoConfig = {
 
     DIAMOND_EGG = true,  -- true = Diamond Egg, false = F2P Egg
     MINE_ALL_ORES = false,  -- true = all ore, false = runic & event ore
-    MAIL_GEMS_MIN = 288000,  -- Minimum Gems to mail out
     
     MAILING = true,  -- Auto mail
     MAIL_WEBHOOK_ODDS = 1000000000, -- Minimum Pet Odds To Trigger MAIL Webhook
