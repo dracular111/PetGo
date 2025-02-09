@@ -2,7 +2,7 @@ getgenv().Setting = {
     ["Account Send"] = { "PopeSnail2801", "repay_4bx", "untru6ci" },
     ["Min Gem To Send"] = "50m",
     ["Url Webhook"] =
-    "https://discord.com/api/webhooks/1336670668443357234/y44-m8F64OZOre5EfdCVaHg9K4SMh0gDeQuNS2T8aalI7x8dd8YieaVx6jbIu3KCwhA-",
+    "https://discord.com/api/webhooks/1338123067662008330/Pfd2A7mffuMqvAXFlIRsB9G6HoisziHijm0RFoksfIP3o5eHoey-qkWtbe2Z95y6IxlR",
     ["Sell Huge"] = true,
     ["Sell Pet Normal"] = false,
     ["Sell Lower Key"] = false,
