@@ -13,12 +13,12 @@ getgenv().Setting = {
     ["Rap Key Lower"] = 30,
     ["Rap Crystal Key"] = 95,
     ["Custom Item"] = {
-        ["Cupids Egg"] = 70,
+        ["Cupids Egg"] = 80,
         ["Huge Egg"] = 90,
         ["Hype Egg"] = 95,
         ["Magma Egg"] = 90,
-        ["Rainbow Boardgame Dice"] = 75,
-        ["Golden Boardgame Dice"] = 75,
+        ["Rainbow Boardgame Dice"] = 80,
+        ["Golden Boardgame Dice"] = 80,
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
