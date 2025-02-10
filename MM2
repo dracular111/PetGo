@@ -5,7 +5,7 @@ getgenv().petsGoConfig = {
     CONSUME_ALL_MINING_CHEST = false,
     CONSUME_EVENT_GIFT_BAG = false,
     CONSUME_EVENT_EGG = false, -- Hype eggs not included
-    IGNORE_DICE_COMBO = false,
+    IGNORE_DICE_COMBO = true,
 
     WEBHOOK_URL = "https://discord.com/api/webhooks/1327523316470386749/GkJB-2wyHCMGU8kf7Fa8HKBegMx7dDjt65rve8GKdtpPa-TL7ja9-nvNMaU-MIYwDzE8",
     MAILING_WEBHOOK_URL = "https://discord.com/api/webhooks/1327523375974842381/Ww1lopIFl2fm4L44NeeURrSB6eWhAd3pce3o0XdyJVHiTZh3dPNRnbGRkgk2F6sd8_Qc",
