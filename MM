@@ -1,3 +1,5 @@
+script_key="zwXBxNTaBFdtPiihYVUZTERTVOVAVdST";
+
 getgenv().petsGoConfig = {
     -- true/false
     CONSUME_CORRUPTED_HUGE_BAIT = false,
