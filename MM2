@@ -15,6 +15,15 @@ getgenv().petsGoConfig = {
     DIAMOND_EGG = true,  -- true = Diamond Egg, false = F2P Egg
     MINE_ALL_ORES = false,  -- true = all ore, false = runic & event ore
     MAIL_GEMS_MIN = 50000,  -- Minimum Gems to mail out
+      -- General
+      INSTA_POTION_IV = 5,
+      CORRUPTED_HUGE_BAIT = 50,
+      CRYSTAL_KEY = 5, CRYSTAL_KEY_UPPER_HALF = 20, CRYSTAL_KEY_LOWER_HALF = 100,
+      EXCLUSIVE_TREASURE_CHEST = 5, ABYSSAL_TREASURE_CHEST = 5,
+      CELESTIAL_MINING_CHEST = 5, RUNIC_MINING_CHEST = 5,
+      CELESTIAL_ENCHANT_SAFE = 1,
+      HUGE_CHARGE_TOKEN = 10, TITANIC_CHARGE_TOKEN = 5,
+      EVENT_GIFT_BAG = 5,
     
     MAILING = true,  -- Auto mail
     MAIL_WEBHOOK_ODDS = 1000000000, -- Minimum Pet Odds To Trigger MAIL Webhook
