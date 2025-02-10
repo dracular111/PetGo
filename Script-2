@@ -9,4 +9,3 @@ end
 _G.SCRIPT2 = true
 
 -- Script của bạn
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/clone-send"))()
