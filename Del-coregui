@@ -1,4 +1,4 @@
-wait(5)
+wait(25)
 getgenv().Region_Hop = {
     ["Enable"] = true, -- true/false
     ["Region"] = "United Kingdom"
