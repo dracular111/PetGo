@@ -7,6 +7,7 @@ getgenv().data = {
         ["Valentines Present"] = 1,
         ["Heartbreak Egg"] = 20,
         ["PlasmaBoard Game Dice"] = 20,
+        ["Boardgame Speed Potion III"] = 20,
         ["CupidCorgi"]            = 1000
     },
     ["UserName"] = {
