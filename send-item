@@ -5,7 +5,6 @@ getgenv().data = {
         ["Heartbreak God Potion"] = 1,
         ["Valentines Spinny Wheel Ticket"] = 1,
         ["Valentines Present"] = 1,
-        ["Heartbreak Egg"] = 20,
         ["CupidCorgi"]            = 1000
     },
     ["UserName"] = {
