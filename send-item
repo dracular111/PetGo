@@ -1,6 +1,7 @@
 getgenv().data = {
     ["Item"] = {
         ["Heartbreak Present"] = 1,
+        ["Heartbreak Egg"] = 20,
         ["Valentines Spinny Wheel Ticket"] = 1,
         ["Valentines Present"] = 1,
         ["CupidCorgi"]            = 1000
