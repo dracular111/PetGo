@@ -8,11 +8,11 @@ getgenv().Setting = {
     ["Rap Huge"] = 50,
     ["Rap Key Lower"] = 30,
     ["Custom Item"] = {
-        ["Cupids Egg"] = 80,
+        ["Cupids Egg"] = 75,
         ["Huge Egg"] = 95,
         ["Hype Egg"] = 90,
         ["Magma Egg"] = 95,
-        ["Heartbreak Prensent"] = 80,
+        ["Heartbreak Present"] = 80,
         ["Valentines Spinny Wheel Ticket"] = 80,
         ["HeartBreak God Potion"] = 80,
     },
