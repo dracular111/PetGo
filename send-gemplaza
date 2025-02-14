@@ -13,7 +13,7 @@ getgenv().Setting = {
         ["Hype Egg"] = 90,
         ["Magma Egg"] = 95,
         ["Heartbreak Egg"] = 60,
-        ["Heartbreak Present"] = 80,
+        ["Heartbreak Present"] = 75,
         ["Valentines Spinny Wheel Ticket"] = 85,
         ["HeartBreak God Potion"] = 80,
     },
