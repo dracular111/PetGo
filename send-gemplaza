@@ -14,7 +14,7 @@ getgenv().Setting = {
         ["Magma Egg"] = 95,
         ["Heartbreak Prensent"] = 90,
         ["Valentines Spinny Wheel Ticket"] = 80,
-        ["Heartbreak God Potion"] = 70,
+        ["Heartbreak God Potion"] = 80,
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
