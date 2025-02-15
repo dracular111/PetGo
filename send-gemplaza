@@ -8,7 +8,7 @@ getgenv().Setting = {
     ["Rap Huge"] = 50,
     ["Rap Key Lower"] = 30,
     ["Custom Item"] = {
-        ["Cupids Egg"] = 40,
+        ["Cupids Egg"] = 30,
         ["Huge Egg"] = 95,
         ["Hype Egg"] = 90,
         ["Magma Egg"] = 95,
@@ -69,6 +69,23 @@ local function loggem(user, gem)
     local Message = {
         ['username'] = "Pet GO Log",
         ["content"] = "@everyone\nUserName: " .. user .. "\nSend Done: " .. gem
+
+    }
+    local DataCallBack = request({
+        Url = getgenv().Setting["Url Webhook"],
+        Method = 'POST',
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = game:GetService("HttpService"):JSONEncode(Message)
+    })
+end
+
+local function logplaza(item, rap, value)
+    local Message = {
+        ['username'] = "Pet GO Log",
+        ["content"] = "Start Sell Item: " ..
+            item .. "\nRap Item: " .. formatNumber(rap) .. "\nSell Value: " .. formatNumber(value),
 
     }
     local DataCallBack = request({
@@ -159,13 +176,13 @@ if game.PlaceId == 19006211286 then
                 if (tonumber(petRAP) > 1000) and petData.sh then
                     local args = {
                         [1] = tostring(uid),
-                        [2] = math.floor(petRAP * (getgenv().Setting["Rap Huge"] / 100)),
+                        [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Rap Huge"] / 100)),
                         [3] = petData._am or 1
                     }
-                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                        :InvokeServer(
-                            unpack(args)
-                        )
+                    if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                        :InvokeServer(unpack(args)) then
+                        logplaza(petData.id, petRAP, petRAP - math.floor(petRAP * (getgenv().Setting["Rap Huge"] / 100)))
+                    end
                     wait(1)
                 else
                     if savepet[petData.id] and savepet[petData.id].Rate and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
@@ -178,7 +195,10 @@ if game.PlaceId == 19006211286 then
                             :InvokeServer(
                                 unpack(args)
                             )
-                        wait(1)
+                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args)) then
+                            logplaza(petData.id, petRAP, tonumber(savepet[petData.id].Rate))
+                        end
                     end
                 end
             end
@@ -192,23 +212,25 @@ if game.PlaceId == 19006211286 then
                     if v._am and v._am <= 5000 then
                         local args = {
                             [1] = tostring(i),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
                             [3] = v._am or 1
                         }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(
-                                unpack(args)
-                            )
+                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args)) then
+                            logplaza(v.id, petRAP,
+                                petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)))
+                        end
                     else
                         local args = {
                             [1] = tostring(i),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
                             [3] = 5000
                         }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(
-                                unpack(args)
-                            )
+                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args)) then
+                            logplaza(v.id, petRAP,
+                                petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)))
+                        end
                     end
                 end
 
@@ -216,23 +238,25 @@ if game.PlaceId == 19006211286 then
                     if v._am and v._am <= 5000 then
                         local args = {
                             [1] = tostring(i),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
+                            [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
                             [3] = v._am or 1
                         }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(
-                                unpack(args)
-                            )
+                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args)) then
+                            logplaza(v.id, petRAP,
+                                petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)))
+                        end
                     else
                         local args = {
                             [1] = tostring(i),
                             [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
                             [3] = 5000
                         }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(
-                                unpack(args)
-                            )
+                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args)) then
+                            logplaza(v.id, petRAP,
+                                petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)))
+                        end
                     end
                 end
             end
@@ -247,25 +271,25 @@ if game.PlaceId == 19006211286 then
                     if v1._am and v1._am <= 5000 then
                         local args = {
                             [1] = tostring(i1),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)),
+                            [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)),
                             [3] = v1._am or 1
                         }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild(
-                            "Booths_CreateListing")
-                            :InvokeServer(
-                                unpack(args)
-                            )
+                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args)) then
+                            logplaza(v1.id, petRAP,
+                                petRAP - math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)))
+                        end
                     else
                         local args = {
                             [1] = tostring(i1),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)),
+                            [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)),
                             [3] = 5000
                         }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild(
-                            "Booths_CreateListing")
-                            :InvokeServer(
-                                unpack(args)
-                            )
+                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args)) then
+                            logplaza(v1.id, petRAP,
+                                petRAP - math.floor(petRAP * (getgenv().Setting["Custom Item"][v1.id] / 100)))
+                        end
                     end
                 end
             end
@@ -295,11 +319,14 @@ if game.PlaceId == 19006211286 then
                 if tonumber(petRAP) > 0 and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
                     local args = {
                         [1] = tostring(uid),
-                        [2] = math.floor(petRAP * (getgenv().Setting["Rap Pet Normal"] / 100)),
+                        [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Rap Pet Normal"] / 100)),
                         [3] = petData._am or 1
                     }
-                    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                        :InvokeServer(unpack(args))
+                    if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                        :InvokeServer(unpack(args)) then
+                        logplaza(pet.id, petRAP,
+                            petRAP - math.floor(petRAP * (getgenv().Setting["Rap Pet Normal"] / 100)))
+                    end
                     wait(1)
                 else
                     if savepet[petData.id] and savepet[petData.id].Rate and not table.find(getgenv().Setting["Skip Pet"], petData.id) then
@@ -308,8 +335,10 @@ if game.PlaceId == 19006211286 then
                             [2] = tonumber(savepet[petData.id].Rate),
                             [3] = petData._am or 1
                         }
-                        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(unpack(args))
+                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
+                            :InvokeServer(unpack(args)) then
+                            logplaza(pet.id, petRAP, tonumber(savepet[petData.id].Rate))
+                        end
                         wait(1)
                     end
                 end
