@@ -1,21 +1,22 @@
 getgenv().Setting = {
     ["Account Send"] = { "PopeSnail2801", "repay_4bx", "untru6ci" },
     ["Min Gem To Send"] = "100m",
-    ["Url Webhook"] =
-    "https://discord.com/api/webhooks/1336358658791051427/e7AlUb4LPd-Nee9xYoCoY2TFza_lhXIVYqhOzs7p0N8XfnFLPeW1hV54LgfAdlvNaHK-",
+    ["Url Webhook"] = "https://discord.com/api/webhooks/1336358658791051427/e7AlUb4LPd-Nee9xYoCoY2TFza_lhXIVYqhOzs7p0N8XfnFLPeW1hV54LgfAdlvNaHK-",
+    ["Url Webhook Plaza"] = "https://discord.com/api/webhooks/1340304329101283388/rPUeyHOojfXcpLq3eMDQPS-9MNKnLay_NbYeWf-TAZY5SaBji6HegAJ2dGLsBLmcXDpG",
     ["Rap Pet Normal"] = 70,
     ["Skip Pet"] = {}, -- Nhap pet kh muon ban
     ["Rap Huge"] = 50,
-    ["Rap Key Lower"] = 30,
     ["Custom Item"] = {
-        ["Cupids Egg"] = 30,
-        ["Huge Egg"] = 95,
+        ["Cupids Egg"] = 40,
+        ["Huge Egg"] = 90,
         ["Hype Egg"] = 90,
         ["Magma Egg"] = 95,
-        ["Heartbreak Egg"] = 20,
-        ["Heartbreak Present"] = 30,
-        ["Valentines Spinny Wheel Ticket"] = 85,
+        ["Heartbreak Egg"] = 50,
+        ["Heartbreak Present"] = 50,
+        ["Valentines Spinny Wheel Ticket"] = 90,
         ["HeartBreak God Potion"] = 80,
+        ["Crystal Key Lower Half"] = 30,
+        ["Crystal Key"] = 90,
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
@@ -89,7 +90,7 @@ local function logplaza(item, rap, value)
 
     }
     local DataCallBack = request({
-        Url = getgenv().Setting["Url Webhook"],
+        Url = getgenv().Setting["Url Webhook Plaza"],
         Method = 'POST',
         Headers = {
             ["Content-Type"] = "application/json"
@@ -203,64 +204,7 @@ if game.PlaceId == 19006211286 then
                 end
             end
         end
-        wait(1)
-        for i, v in save.Get().Inventory.Misc do
-            local petItem = Items.Types["Misc"]:Get(i)
-            local petRAP = petItem:GetRAP() or 0
-            if petRAP ~= 0 then
-                if v.id == "Crystal Key Lower Half" then
-                    if v._am and v._am <= 5000 then
-                        local args = {
-                            [1] = tostring(i),
-                            [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
-                            [3] = v._am or 1
-                        }
-                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(unpack(args)) then
-                            logplaza(v.id, petRAP,
-                                petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)))
-                        end
-                    else
-                        local args = {
-                            [1] = tostring(i),
-                            [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
-                            [3] = 5000
-                        }
-                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(unpack(args)) then
-                            logplaza(v.id, petRAP,
-                                petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)))
-                        end
-                    end
-                end
 
-                if v.id == "Crystal Key" then
-                    if v._am and v._am <= 5000 then
-                        local args = {
-                            [1] = tostring(i),
-                            [2] = petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
-                            [3] = v._am or 1
-                        }
-                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(unpack(args)) then
-                            logplaza(v.id, petRAP,
-                                petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)))
-                        end
-                    else
-                        local args = {
-                            [1] = tostring(i),
-                            [2] = math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)),
-                            [3] = 5000
-                        }
-                        if game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_CreateListing")
-                            :InvokeServer(unpack(args)) then
-                            logplaza(v.id, petRAP,
-                                petRAP - math.floor(petRAP * (getgenv().Setting["Rap Key Lower"] / 100)))
-                        end
-                    end
-                end
-            end
-        end
 
         wait(1)
         for i, v in save.Get().Inventory do
