@@ -7,18 +7,18 @@ getgenv().Setting = {
     "https://discord.com/api/webhooks/1340304329101283388/rPUeyHOojfXcpLq3eMDQPS-9MNKnLay_NbYeWf-TAZY5SaBji6HegAJ2dGLsBLmcXDpG",
     ["Rap Pet Normal"] = 0.7,
     ["Skip Pet"] = {}, -- Nhap pet kh muon ban
-    ["Rap Huge"] = 0.5,
+    ["Rap Huge"] = 0.6,
     ["Custom Item"] = {
-        ["Cupids Egg"] = 0.65,
+        ["Cupids Egg"] = 0.8,
         ["Huge Egg"] = 0.9,
         ["Hype Egg"] = 0.9,
         ["Magma Egg"] = 0.95,
-        ["Heartbreak Egg"] = 0.65,
-        ["Heartbreak Present"] = 0.8,
+        ["Heartbreak Egg"] = 0.8,
+        ["Heartbreak Present"] = 0.9,
         ["Valentines Spinny Wheel Ticket"] = 1,
-        ["HeartBreak God Potion"] = 0.85,
+        ["HeartBreak God Potion"] = 0.9,
         ["Crystal Key Lower Half"] = 0.6,
-        ["Crystal Key"] = 0.9,
+        ["Crystal Key"] = 0.95,
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
