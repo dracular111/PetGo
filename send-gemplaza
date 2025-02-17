@@ -6,7 +6,7 @@ getgenv().Setting = {
     ["Url Webhook Plaza"] =
     "https://discord.com/api/webhooks/1340304329101283388/rPUeyHOojfXcpLq3eMDQPS-9MNKnLay_NbYeWf-TAZY5SaBji6HegAJ2dGLsBLmcXDpG",
     ["Rap Pet Normal"] = 0.7,
-    ["Skip Pet"] = {}, -- Nhap pet kh muon ban
+    ["Skip Pet"] = { "Huge Angry Yeti" }, -- Nhap pet kh muon ban
     ["Rap Huge"] = 0.6,
     ["Custom Item"] = {
         ["Cupids Egg"] = 0.8,
