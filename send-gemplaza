@@ -19,7 +19,10 @@ getgenv().Setting = {
         ["HeartBreak God Potion"] = 0.9,
         ["Crystal Key Lower Half"] = 0.6,
         ["Crystal Key"] = 0.95,
-        ["Huge Hell Chest Mimic"] = 0.7,
+        ["Huge Hell Chest Mimic"] = 0.6,
+        ["Blossom Koi Fish"] = 0.7,
+        ["Flex Fluffy Cat"] = 0.7,
+        ["Sapphire Phoenix"] = 0.7,
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
