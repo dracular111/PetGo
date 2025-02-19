@@ -1,7 +1,9 @@
 getgenv().data = {
     ["Item"] = {
         ["Valentines Spinny Wheel Ticket"] = 1,
-        ["CupidCorgi"]            = 1000
+        ["Blossom Koi Fish"]            = 1
+        ["Flex Fluffy Cat"]            = 1
+        ["Sapphire Phoenix"]            = 1
     },
     ["UserName"] = {
         "MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik",
