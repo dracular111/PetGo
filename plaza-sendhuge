@@ -4,7 +4,7 @@ getgenv().data = {
         ["Huge Hell Chest Mimic"]            = 1
     },
     ["UserName"] = {
-        "PopeSnail2801", "untru6ci", "repay_4bx"
+        "PopeSnail2801"
     },
     ["Url Webhook"] =
     "https://discord.com/api/webhooks/1341768784826073139/Pi_JUC3v-i8oJ1ZhpJXkv0YFiz2agTtvkRThYSTSitcH3DyBEQVFbb-K8R4dSQ0I5yPl"
