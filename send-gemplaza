@@ -17,12 +17,12 @@ getgenv().Setting = {
         ["Heartbreak Present"] = 0.85,
         ["Valentines Spinny Wheel Ticket"] = 0.85,
         ["HeartBreak God Potion"] = 0.9,
-        ["Crystal Key Lower Half"] = 0.5,
+        ["Crystal Key Lower Half"] = 0.4,
         ["Crystal Key"] = 0.9,
         ["Huge Hell Chest Mimic"] = 0.4,
-        ["Blossom Koi Fish"] = 0.7,
-        ["Flex Fluffy Cat"] = 0.7,
-        ["Sapphire Phoenix"] = 0.7,
+        ["Blossom Koi Fish"] = 0.65,
+        ["Flex Fluffy Cat"] = 0.65,
+        ["Sapphire Phoenix"] = 0.65,
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
