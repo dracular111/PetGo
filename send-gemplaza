@@ -19,7 +19,6 @@ getgenv().Setting = {
         ["HeartBreak God Potion"] = 0.9,
         ["--Crystal Key Lower Half"] = 0.35,
         ["Crystal Key"] = 0.9,
-        ["Huge Hell Chest Mimic"] = 0.5,
         ["Blossom Koi Fish"] = 0.65,
         ["Flex Fluffy Cat"] = 0.65,
         ["Sapphire Phoenix"] = 0.65,
