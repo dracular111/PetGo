@@ -1,0 +1,41 @@
+local Players = game:GetService('Players')
+local Client = Players.LocalPlayer
+_G.EnableFriendRequest = true
+
+local function SendFriendRequests()
+	
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= Client then  
+            Client:RequestFriendship(player)
+			Msg(Client.Name.." đã gửi yêu cầu kết bạn tới "..player.Name)
+			task.wait(600)
+        end
+        task.wait(1)
+    end
+end
+
+
+task.spawn(function()		
+    if _G.EnableFriendRequest then
+		wait(600)
+		SendFriendRequests()
+
+        
+    end
+end)
+
+
+task.spawn(function()
+	wait(math.random(1800, 3600))
+		while true do
+	
+	serverhop()
+	wait(1)
+end
+end)
+
+
+
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
