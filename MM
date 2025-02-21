@@ -29,14 +29,14 @@ getgenv().petsGoConfig = {
     MIN_MAIL_AMOUNT = {  -- Rare items not listed, default min 1
       -- General
       INSTA_POTION_IV = 5,
-      CORRUPTED_HUGE_BAIT = 20,
+      CORRUPTED_HUGE_BAIT = 50,
       CRYSTAL_KEY = 5, CRYSTAL_KEY_UPPER_HALF = 5, CRYSTAL_KEY_LOWER_HALF = 100,
-      EXCLUSIVE_TREASURE_CHEST = 5, ABYSSAL_TREASURE_CHEST = 5,
-      CELESTIAL_MINING_CHEST = 5, RUNIC_MINING_CHEST = 5,
-      CELESTIAL_ENCHANT_SAFE = 5,
+      EXCLUSIVE_TREASURE_CHEST = 10, ABYSSAL_TREASURE_CHEST = 10,
+      CELESTIAL_MINING_CHEST = 10, RUNIC_MINING_CHEST = 10,
+      CELESTIAL_ENCHANT_SAFE = 10,
       -- Event
-      HUGE_CHARGE_TOKEN = 2, TITANIC_CHARGE_TOKEN = 2,
-      EVENT_GIFT_BAG = 2,
+      HUGE_CHARGE_TOKEN = 5, TITANIC_CHARGE_TOKEN = 5,
+      EVENT_GIFT_BAG = 5,
     }, 
 
     USERNAME_TO_MAIL = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2"} -- Mail to username, Example : USERNAME_TO_MAIL = {"username1", "username2"} 
