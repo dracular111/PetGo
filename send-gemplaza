@@ -24,7 +24,7 @@ getgenv().Setting = {
         ["Flex Fluffy Cat"] = 0.65,
         ["Sapphire Phoenix"] = 0.65,
         ["Huge Hell Chest Mimic"] = 0.5,
-        ["Huge Raining Love Dog"] = 0.8
+        ["Huge Raining Love Dog"] = 0.85
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
