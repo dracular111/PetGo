@@ -6,7 +6,7 @@ getgenv().Setting = {
     ["Url Webhook Plaza"] =
     "https://discord.com/api/webhooks/1340304329101283388/rPUeyHOojfXcpLq3eMDQPS-9MNKnLay_NbYeWf-TAZY5SaBji6HegAJ2dGLsBLmcXDpG",
     ["Rap Pet Normal"] = 0.7,
-    ["Skip Pet"] = { "Huge Hell Chest Mimic", "Huge Raining Love Dog", "Huge Prison Cat", "Huge Robber Pug", "HUGE Masked Blobfish" }, -- Nhap pet kh muon ban
+    ["Skip Pet"] = { "Huge Hell Chest Mimic", "Huge Raining Love Dog", "Huge Prison Cat", "Huge Robber Pug", "Huge Masked Blobfish" }, -- Nhap pet kh muon ban
     ["Rap Huge"] = 0.6,
     ["Rap Huge Normal"] = 0.9,
     ["Custom Item"] = {
@@ -27,7 +27,7 @@ getgenv().Setting = {
         ["Huge Raining Love Dog"] = 0.85,
         ["Huge Prison Cat"] = 0.8,
         ["Huge Robber Pug"] = 0.8,
-        ["HUGE Masked Blobfish"] = 0.8,
+        ["Huge Masked Blobfish"] = 0.8,
         ["Thieving God Potion"] = 0.7,
         ["Thieving Gift Bag"] = 0.8,
         ["Thieving Egg"] = 0.6,
