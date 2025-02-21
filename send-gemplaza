@@ -6,7 +6,7 @@ getgenv().Setting = {
     ["Url Webhook Plaza"] =
     "https://discord.com/api/webhooks/1340304329101283388/rPUeyHOojfXcpLq3eMDQPS-9MNKnLay_NbYeWf-TAZY5SaBji6HegAJ2dGLsBLmcXDpG",
     ["Rap Pet Normal"] = 0.7,
-    ["Skip Pet"] = { "Huge Hell Chest Mimic" }, -- Nhap pet kh muon ban
+    ["Skip Pet"] = { "Huge Hell Chest Mimic", "Huge Raining Love Dog" }, -- Nhap pet kh muon ban
     ["Rap Huge"] = 0.6,
     ["Rap Huge Normal"] = 0.9,
     ["Custom Item"] = {
@@ -23,7 +23,8 @@ getgenv().Setting = {
         ["Blossom Koi Fish"] = 0.65,
         ["Flex Fluffy Cat"] = 0.65,
         ["Sapphire Phoenix"] = 0.65,
-        ["Huge Hell Chest Mimic"] = 0.5
+        ["Huge Hell Chest Mimic"] = 0.5,
+        ["Huge Raining Love Dog"] = 0.8
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
