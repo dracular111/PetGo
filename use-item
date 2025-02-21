@@ -1,7 +1,10 @@
 getgenv().item = {
     "Heartbreak Egg",
     "Bundle O' Scrolls",
-    "Bundle O' Boosts"
+    "Bundle O' Boosts",
+    "Fzoren Fishing Chest",
+    "Basic Mining Chest",
+    "Epic Mining Chest"
 }
 repeat
     wait()
@@ -16,10 +19,10 @@ local a = require(game:GetService("ReplicatedStorage").Library.Directory.Pets)
 while wait() do
     for i, v in save.Get().Inventory.Lootbox do
         if table.find(getgenv().item, v.id) then
-            if v._am and v._am >= 30 then
+            if v._am and v._am >= 10 then
                 local args = {
                     [1] = i,
-                    [2] = 30
+                    [2] = 10
                 }
 
                 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Lootbox: Open"):InvokeServer(
