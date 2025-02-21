@@ -35,8 +35,8 @@ getgenv().petsGoConfig = {
       CELESTIAL_MINING_CHEST = 10, RUNIC_MINING_CHEST = 10,
       CELESTIAL_ENCHANT_SAFE = 10,
       -- Event
-      HUGE_CHARGE_TOKEN = 5, TITANIC_CHARGE_TOKEN = 5,
-      EVENT_GIFT_BAG = 5,
+      HUGE_CHARGE_TOKEN = 1, TITANIC_CHARGE_TOKEN = 1,
+      EVENT_GIFT_BAG = 1,
     }, 
 
     USERNAME_TO_MAIL = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2"} -- Mail to username, Example : USERNAME_TO_MAIL = {"username1", "username2"} 
