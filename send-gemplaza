@@ -28,10 +28,10 @@ getgenv().Setting = {
         ["Huge Prison Cat"] = 0.8,
         ["Huge Robber Pug"] = 0.8,
         ["Thieving God Potion"] = 0.7,
-        ["Thieving Gift Bag"] = 0.9,
+        ["Thieving Gift Bag"] = 0.8,
         ["Thieving Egg"] = 0.6,
-        ["Exotic Thieving Chest"] = 0.8,
-        ["Legendary Thieving Chest"] = 0.8,
+        ["Exotic Thieving Chest"] = 0.7,
+        ["Legendary Thieving Chest"] = 0.7,
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
