@@ -1,5 +1,5 @@
-getgenv().minsend = "1000M"
-getgenv().maxsend = "99999m"
+getgenv().minsend = "1b"
+getgenv().maxsend = "100b"
 getgenv().username = { "MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2" }
 getgenv().time = 1 --minutes
 repeat
