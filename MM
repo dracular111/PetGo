@@ -35,7 +35,7 @@ getgenv().petsGoConfig = {
       CELESTIAL_MINING_CHEST = 10, RUNIC_MINING_CHEST = 5,
       CELESTIAL_ENCHANT_SAFE = 10,
       EVENT_GIFT_BAG = 1,
-      EVENT_EGG = 10,
+      EVENT_EGG = 500,
       LEGENDARY_THIEVING_CHEST = 5,
     }, 
 
