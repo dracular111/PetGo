@@ -1,1 +1,1 @@
-game.Players.LocalPlayer:Kick("Script-Main-Reset")
+--game.Players.LocalPlayer:Kick("Script-Main-Reset")
