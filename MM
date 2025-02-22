@@ -35,6 +35,9 @@ getgenv().Settings = {
             ["Exclusive Enchant Safe"] = {Amount = 1},
             ["Robber Cat"] = {Amount = 1},
             ["Detective Terrier"] = {Amount = 1},
+            ["Blossom Koi Fish"] = {Amount = 1},
+            ["Flex Fluffy Cat"] = {Amount = 1},
+            ["Sapphire Phoenix"] = {Amount = 1},
             ["Valentines Spinny Wheel Ticket"] = {Amount = 1} 
         },
     },
