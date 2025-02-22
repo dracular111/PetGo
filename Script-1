@@ -10,3 +10,4 @@ _G.SCRIPT1 = true
 
 -- Script của bạn
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/send-item"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dracular111/02/main/Add"))()
