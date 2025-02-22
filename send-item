@@ -3,7 +3,6 @@ getgenv().data = {
         ["Valentines Spinny Wheel Ticket"] = 1,
         ["Thieving God Potion"] = 1,
         ["Thieving Gift Bag"] = 1,
-        ["Thieving Egg"] = 1,
         ["1x Thieving Egg"] = 50,
         ["10x Thieving Egg"] = 10,
         ["100x Thieving Egg"] = 5,
