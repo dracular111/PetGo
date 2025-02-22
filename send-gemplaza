@@ -38,9 +38,9 @@ getgenv().Setting = {
         ["10,000x Thieving Egg"] = 0.6,
         ["Exotic Thieving Chest"] = 0.8,
         ["Legendary Thieving Chest"] = 0.5,
-        ["Emerald"] = 0.8,
-        ["Diamond"] = 0.8,
-        ["Exclusive"] = 0.8,
+        ["Emerald"] = 0.9,
+        ["Diamond"] = 0.9,
+        ["Exclusive"] = 0.9,
         ["Exclusive Enchant Safe"] = 0.8,
     },
     ["Time to remove item booth"] = 5 -- Minutes
