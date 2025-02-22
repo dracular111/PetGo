@@ -42,6 +42,7 @@ getgenv().Setting = {
         ["Emerald Lockpick"] = 0.7,
         ["Diamond Lockpick"] = 0.7,
         ["Exclusive Lockpick"] = 0.7,
+        ["Exclusive Enchant Safe"] = 0.8,
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
