@@ -7,7 +7,7 @@ getgenv().Settings = {
     },
     ["Mailing"] = {
         Usernames = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2"},
-        Webhook = "",
+        Webhook = "https://discord.com/api/webhooks/1313459930937819176/lfarOF0PLdIFBmSjGcy51OiVs_cynFIgOfqyGO1w0Pm-F4ea4_NwF79KQSm2KpqnnJ_Z",
         ["Pets"] = {
             KeepBestPets = true,
             Difficulty = "Above 1b",
