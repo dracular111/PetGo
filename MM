@@ -16,7 +16,7 @@ getgenv().Settings = {
             --// These are EXAMPLES, please change/add anything to your liking! (Display Names) \\--
             ["Exotic Mining Chest"] = {Amount = 1},
             ["Runic Mining Chest"] = {Amount = 5},
-            ["Abyssal Treasure Chest"] = {Amount = 1},
+            ["Abyssal Treasure Chest"] = {Amount = 10},
             ["Instant Luck Potion 4"] = {Amount = 1},
             ["Valentines Spinny Wheel Ticket"] = {Amount = 1} 
         },
