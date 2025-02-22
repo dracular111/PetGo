@@ -14,6 +14,7 @@ getgenv().data = {
         ["Emerald Lockpick"] = 1,
         ["Diamond Lockpick"] = 1,
         ["Exclusive Lockpick"] = 1,
+        ["Exclusive Enchant Safe"] = 1,
         ["Blossom Koi Fish"]            = 1,
         ["Flex Fluffy Cat"]            = 1,
         ["Detective Terrier"]            = 1,
