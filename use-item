@@ -5,6 +5,7 @@ getgenv().item = {
     "Fzoren Fishing Chest",
     "Basic Mining Chest",
     "Epic Mining Chest"
+    "1x Thieving Egg"
 }
 repeat
     wait()
