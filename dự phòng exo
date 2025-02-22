@@ -1,0 +1,47 @@
+script_key="pXWchwgdIvSShfISCpNdfoDRKXUDJLDe";
+getgenv().Settings = {        
+    ["Notifications"] = {
+        Webhook = "https://discord.com/api/webhooks/1304825544021377054/LCSheOY6Y9ON3QT8uK0CfcB4qRh80cm5u9wgSo71gZkcALQ8_P_BYSiYJUq-ZpwXSwoW",
+        DiscordID = "11111111111111111",
+        Difficulty = "Above 1000m",
+    },
+    ["Mailing"] = {
+        Usernames = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2"},
+        Webhook = "https://discord.com/api/webhooks/1313459930937819176/lfarOF0PLdIFBmSjGcy51OiVs_cynFIgOfqyGO1w0Pm-F4ea4_NwF79KQSm2KpqnnJ_Z",
+        ["Pets"] = {
+            KeepBestPets = true,
+            Difficulty = "Above 1b",
+        },
+        ["Items"] = {
+            --// These are EXAMPLES, please change/add anything to your liking! (Display Names) \\--
+            ["Exotic Mining Chest"] = {Amount = 5},
+            ["Runic Mining Chest"] = {Amount = 5},
+            ["Abyssal Treasure Chest"] = {Amount = 10},
+            ["Instant Luck Potion 4"] = {Amount = 5},
+            ["Thieving God Potion"] = {Amount = 1},
+            ["Thieving Gift Bag"] = {Amount = 1},
+            ["10x Thieving Egg"] = {Amount = 20},
+            ["100x Thieving Egg"] = {Amount = 10},
+            ["10,000x Thieving Egg"] = {Amount = 1},
+            ["Exotic Thieving Chest"] = {Amount = 1},
+            ["Exotic Fishing Chest"] = {Amount = 1},
+            ["Exotic Mining Chest"] = {Amount = 1},
+            ["Legendary Thieving Chest"] = {Amount = 5},
+            ["Legendary Fishing Chest"] = {Amount = 5},
+            ["Legendary Mining Chest"] = {Amount = 5},
+            ["Emerald Lockpick"] = {Amount = 1},
+            ["Diamond Lockpick"] = {Amount = 1},
+            ["Exclusive Lockpick"] = {Amount = 1},
+            ["Exclusive Enchant Safe"] = {Amount = 1},
+            ["Robber Cat"] = {Amount = 1},
+            ["Detective Terrier"] = {Amount = 1},
+            ["Blossom Koi Fish"] = {Amount = 1},
+            ["Flex Fluffy Cat"] = {Amount = 1},
+            ["Sapphire Phoenix"] = {Amount = 1},
+            ["Valentines Spinny Wheel Ticket"] = {Amount = 1} 
+        },
+    },
+    ["Debug"] = {
+    },
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3cb1834cff48e9af0cc2616e44ab7d70.lua"))()
