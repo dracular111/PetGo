@@ -42,8 +42,8 @@ getgenv().petsGoConfig = {
     SELL_KEY_UPPER = false,  -- true/false, enable selling upper crystal key
 
     -- Tools
-    SELL_FISHING_ROD = true, SELL_FISHING_ROD_PERCENTAGE = 1, 
-    SELL_PICKAXE = true, SELL_PICKAXE_PERCENTAGE = 1,
+    SELL_FISHING_ROD = true, SELL_FISHING_ROD_PERCENTAGE = 0.8, 
+    SELL_PICKAXE = true, SELL_PICKAXE_PERCENTAGE = 0.8,
     SELL_LOCKPICK = true, SELL_LOCKPICK_PERCENTAGE = 0.8,
 
     -- Event
