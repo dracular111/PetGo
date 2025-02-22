@@ -1,47 +1,45 @@
-script_key="pXWchwgdIvSShfISCpNdfoDRKXUDJLDe";
-getgenv().Settings = {        
-    ["Notifications"] = {
-        Webhook = "https://discord.com/api/webhooks/1304825544021377054/LCSheOY6Y9ON3QT8uK0CfcB4qRh80cm5u9wgSo71gZkcALQ8_P_BYSiYJUq-ZpwXSwoW",
-        DiscordID = "11111111111111111",
-        Difficulty = "Above 1000m",
-    },
-    ["Mailing"] = {
-        Usernames = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2"},
-        Webhook = "https://discord.com/api/webhooks/1313459930937819176/lfarOF0PLdIFBmSjGcy51OiVs_cynFIgOfqyGO1w0Pm-F4ea4_NwF79KQSm2KpqnnJ_Z",
-        ["Pets"] = {
-            KeepBestPets = true,
-            Difficulty = "Above 1b",
-        },
-        ["Items"] = {
-            --// These are EXAMPLES, please change/add anything to your liking! (Display Names) \\--
-            ["Exotic Mining Chest"] = {Amount = 5},
-            ["Runic Mining Chest"] = {Amount = 5},
-            ["Abyssal Treasure Chest"] = {Amount = 10},
-            ["Instant Luck Potion 4"] = {Amount = 5},
-            ["Thieving God Potion"] = {Amount = 1},
-            ["Thieving Gift Bag"] = {Amount = 1},
-            ["10x Thieving Egg"] = {Amount = 20},
-            ["100x Thieving Egg"] = {Amount = 10},
-            ["10,000x Thieving Egg"] = {Amount = 1},
-            ["Exotic Thieving Chest"] = {Amount = 1},
-            ["Exotic Fishing Chest"] = {Amount = 1},
-            ["Exotic Mining Chest"] = {Amount = 1},
-            ["Legendary Thieving Chest"] = {Amount = 5},
-            ["Legendary Fishing Chest"] = {Amount = 5},
-            ["Legendary Mining Chest"] = {Amount = 5},
-            ["Emerald Lockpick"] = {Amount = 1},
-            ["Diamond Lockpick"] = {Amount = 1},
-            ["Exclusive Lockpick"] = {Amount = 1},
-            ["Exclusive Enchant Safe"] = {Amount = 1},
-            ["Robber Cat"] = {Amount = 1},
-            ["Detective Terrier"] = {Amount = 1},
-            ["Blossom Koi Fish"] = {Amount = 1},
-            ["Flex Fluffy Cat"] = {Amount = 1},
-            ["Sapphire Phoenix"] = {Amount = 1},
-            ["Valentines Spinny Wheel Ticket"] = {Amount = 1} 
-        },
-    },
-    ["Debug"] = {
-    },
+getgenv().petsGoConfig = {
+    -- true/false
+    CONSUME_CORRUPTED_HUGE_BAIT = true,
+    CONSUME_ALL_ENCHANT_SAFE = false,
+    CONSUME_ALL_MINING_CHEST = false,
+    CONSUME_EVENT_EGG = false, -- Hype eggs not included
+    CONSUME_ALL_THIEVING_CHEST = false,
+    CONSUME_INSTA_LUCK_4 = true,
+    IGNORE_DICE_COMBO = false, -- Consume Insta Luck 3 without combo
+
+    WEBHOOK_URL = "https://discord.com/api/webhooks/1327523316470386749/GkJB-2wyHCMGU8kf7Fa8HKBegMx7dDjt65rve8GKdtpPa-TL7ja9-nvNMaU-MIYwDzE8",
+    MAILING_WEBHOOK_URL = "https://discord.com/api/webhooks/1327523375974842381/Ww1lopIFl2fm4L44NeeURrSB6eWhAd3pce3o0XdyJVHiTZh3dPNRnbGRkgk2F6sd8_Qc",
+    DISCORD_ID = "1318777726223646721",  -- Required!!! (For public-webhook)
+    WEBHOOK_ODDS = 1000000000, -- Minimum Pet Odds To Trigger Webhook
+
+    DIAMOND_EGG = true,  -- true = Diamond Egg, false = F2P Egg
+    MINE_ALL_ORES = true,  -- true = all ore, false = runic & event ore
+    
+    -- Allowed enchant keywords : Criticals, Loot, Speed, Strength, Chests, Diamonds, Huges, Lightning, TNT
+    PICKAXE_ENCHANTS = {"Speed", "Speed", "Strength"},
+    
+    MAILING = true,  -- Auto mail
+    SHOW_PET_WEBHOOK_USERNAME = true,
+    MAIL_FISHING_ROD = true,  -- true = mail, false = keep fishing rod on account (FASTER Fishing)
+    MAIL_WEBHOOK_ODDS = 1000000000, -- Minimum Pet Odds To Trigger MAIL Webhook
+    MAIL_PET_ODDS = 1000000000,  -- Minimum Pet Odds To Mail
+    MAIL_GEMS_MIN = 30000,  -- Minimum Gems to mail out
+
+    MIN_MAIL_AMOUNT = {  -- Rare items not listed, default min 1
+      -- General
+      INSTA_POTION_IV = 5,
+      CORRUPTED_HUGE_BAIT = 50,
+      CRYSTAL_KEY = 5, CRYSTAL_KEY_UPPER_HALF = 5, CRYSTAL_KEY_LOWER_HALF = 100,
+      EXCLUSIVE_TREASURE_CHEST = 10, ABYSSAL_TREASURE_CHEST = 10,
+      CELESTIAL_MINING_CHEST = 10, RUNIC_MINING_CHEST = 5,
+      CELESTIAL_ENCHANT_SAFE = 5,
+      EVENT_GIFT_BAG = 1,
+      EVENT_EGG = 20,
+      LEGENDARY_THIEVING_CHEST = 5,
+    }, 
+
+    USERNAME_TO_MAIL = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2"} -- Mail to username, Example : USERNAME_TO_MAIL = {"username1", "username2"} 
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3cb1834cff48e9af0cc2616e44ab7d70.lua"))()
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5653ca0a4685e7d4268329988eefdb21.lua"))()
