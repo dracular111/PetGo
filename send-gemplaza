@@ -49,7 +49,9 @@ getgenv().Setting = {
         ["Emerald"] = 0.9,
         ["Diamond"] = 0.9,
         ["Exclusive"] = 0.9,
-        ["Exclusive Enchant Safe"] = 0.8,
+        ["Exclusive Enchant Safe"] = 0.85,
+        ["Celestial Enchant Safe"] = 0.85,
+        ["Legendary Enchant Safe"] = 0.8
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
