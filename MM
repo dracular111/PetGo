@@ -17,7 +17,7 @@ getgenv().petsGoConfig = {
     MINE_ALL_ORES = true,  -- true = all ore, false = runic & event ore
     
     -- Allowed enchant keywords : Criticals, Loot, Speed, Strength, Chests, Diamonds, Huges, Lightning, TNT
-    PICKAXE_ENCHANTS = {"Speed", "Speed", "Strength"},
+    PICKAXE_ENCHANTS = {"Speed", "Loot", "Strength"},
     
     MAILING = true,  -- Auto mail
     SHOW_PET_WEBHOOK_USERNAME = true,
