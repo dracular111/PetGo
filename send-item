@@ -1,6 +1,7 @@
 getgenv().data = {
     ["Item"] = {
         ["Valentines Spinny Wheel Ticket"] = 1,
+        ["Titanic Gift Bag"] = 1,
         ["Exclusive Enchant Safe"] = 1,
         ["Celestial Enchant Safe"] = 1,
         ["Legendary Enchant Safe"] = 1,
