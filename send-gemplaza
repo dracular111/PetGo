@@ -41,6 +41,7 @@ getgenv().Setting = {
         ["Exotic Mining Chest"] = 0.8,
         ["Legendary Thieving Chest"] = 0.7,
         ["Legendary Fishing Chest"] = 0.6,
+        ["Legendary Mining Chest"] = 0.4,
         ["Abyssal Treasure Chest"] = 0.8,
         ["Runic Mining Chest"] = 0.8,
         ["Legendary Fishing Bait"] = 0.8,
