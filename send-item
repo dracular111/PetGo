@@ -4,6 +4,7 @@ getgenv().data = {
         ["Titanic Gift Bag"] = 1,
         ["Titanic Mining Chest"] = 1,
         ["Pickaxe Huge Hunter"] = 1,
+        ["Corrupted Huge Bait"] = 20,
         ["Exclusive Enchant Safe"] = 1,
         ["Celestial Enchant Safe"] = 1,
         ["Legendary Enchant Safe"] = 1,
