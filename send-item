@@ -28,6 +28,8 @@ getgenv().data = {
         ["Detective Terrier"]            = 1,
         ["Robber Cat"]            = 1,
         ["Ninja Maskot"]            = 1,
+        ["Ninja Turtle"]            = 1,
+        ["Ninja Raccoon"]            = 1,
         ["Sapphire Phoenix"]            = 1
     },
     ["UserName"] = {
