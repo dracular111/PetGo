@@ -12,6 +12,7 @@ getgenv().data = {
         ["Exotic Thieving Chest"] = 1,
         ["Exotic Fishing Chest"] = 5,
         ["Exotic Mining Chest"] = 50,
+        ["Runic Mining Chest"] = 5,
         ["Legendary Thieving Chest"] = 5,
         ["Legendary Fishing Chest"] = 20,
         ["Legendary Mining Chest"] = 100,
