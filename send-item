@@ -27,6 +27,7 @@ getgenv().data = {
         ["Flex Fluffy Cat"]            = 1,
         ["Detective Terrier"]            = 1,
         ["Robber Cat"]            = 1,
+        ["Ninja Maskot"]            = 1,
         ["Sapphire Phoenix"]            = 1
     },
     ["UserName"] = {
