@@ -1,11 +1,11 @@
 
 getgenv().petsGoConfig = {
     -- true/false
-    CONSUME_CORRUPTED_HUGE_BAIT = false,
-    CONSUME_ALL_ENCHANT_SAFE = false,
-    CONSUME_ALL_MINING_CHEST = false,
-    CONSUME_EVENT_GIFT_BAG = false,
-    CONSUME_EVENT_EGG = false, -- Hype eggs not included
+    CONSUME_CORRUPTED_HUGE_BAIT = true,
+    CONSUME_ALL_ENCHANT_SAFE = true,
+    CONSUME_ALL_MINING_CHEST = true,
+    CONSUME_EVENT_EGG = true, -- Hype eggs not included
+    CONSUME_ALL_THIEVING_CHEST = true,
     CONSUME_INSTA_LUCK_4 = true,
     IGNORE_DICE_COMBO = false, -- Consume Insta Luck 3 without combo
 
@@ -18,29 +18,29 @@ getgenv().petsGoConfig = {
     MINE_ALL_ORES = true,  -- true = all ore, false = runic & event ore
     
     -- Allowed enchant keywords : Criticals, Loot, Speed, Strength, Chests, Diamonds, Huges, Lightning, TNT
-    PICKAXE_ENCHANTS = {"Speed", "Loot", "Criticals"},
+    PICKAXE_ENCHANTS = {"Speed", "Loot", "Strength"},
     
     MAILING = true,  -- Auto mail
     SHOW_PET_WEBHOOK_USERNAME = true,
     MAIL_FISHING_ROD = true,  -- true = mail, false = keep fishing rod on account (FASTER Fishing)
     MAIL_WEBHOOK_ODDS = 1000000000, -- Minimum Pet Odds To Trigger MAIL Webhook
     MAIL_PET_ODDS = 1000000000,  -- Minimum Pet Odds To Mail
-    MAIL_GEMS_MIN = 20000,  -- Minimum Gems to mail out
+    MAIL_GEMS_MIN = 30000,  -- Minimum Gems to mail out
 
     MIN_MAIL_AMOUNT = {  -- Rare items not listed, default min 1
       -- General
       INSTA_POTION_IV = 5,
-      CORRUPTED_HUGE_BAIT = 50,
-      CRYSTAL_KEY = 5, CRYSTAL_KEY_UPPER_HALF = 5, CRYSTAL_KEY_LOWER_HALF = 100,
+      CORRUPTED_HUGE_BAIT = 20,
+      CRYSTAL_KEY = 1, CRYSTAL_KEY_UPPER_HALF = 5, CRYSTAL_KEY_LOWER_HALF = 50,
       EXCLUSIVE_TREASURE_CHEST = 10, ABYSSAL_TREASURE_CHEST = 10,
-      CELESTIAL_MINING_CHEST = 10, RUNIC_MINING_CHEST = 10,
-      CELESTIAL_ENCHANT_SAFE = 10,
-      -- Event
-      HUGE_CHARGE_TOKEN = 1, TITANIC_CHARGE_TOKEN = 1,
+      CELESTIAL_MINING_CHEST = 10, RUNIC_MINING_CHEST = 5,
+      CELESTIAL_ENCHANT_SAFE = 5,
       EVENT_GIFT_BAG = 1,
+      EVENT_EGG = 20,
+      LEGENDARY_THIEVING_CHEST = 10,
     }, 
 
-    USERNAME_TO_MAIL = {"MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik", "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2"} -- Mail to username, Example : USERNAME_TO_MAIL = {"username1", "username2"} 
+    USERNAME_TO_MAIL = {"conmeohpz000", "conmeohpz001", "conmeohpz003", "MarksEvan8773", "BrightSandra4", "squir5ic", "start5ka", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg"} -- Mail to username, Example : USERNAME_TO_MAIL = {"username1", "username2"} 
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5653ca0a4685e7d4268329988eefdb21.lua"))()
