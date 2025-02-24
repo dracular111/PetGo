@@ -29,8 +29,7 @@ getgenv().data = {
         ["Sapphire Phoenix"]            = 1
     },
     ["UserName"] = {
-        "MarksEvan8773", "BrightSandra4", "FrenchAngelica2", "BenderMichael2", "squir5ic", "start5ka", "tirin2ik",
-        "unlov5xi", "jovia_3cw", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "kite5h2", "congahpz010", "conmeohpz000", "conmeohpz001", "conmeohpz002", "conmeohpz003", "conmeohpz004", "conmeohpz005"
+        "conmeohpz000", "conmeohpz001", "conmeohpz003", "MarksEvan8773", "BrightSandra4", "squir5ic", "start5ka", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg"
     },
     ["Url Webhook"] =
     "https://discord.com/api/webhooks/1337684621189714083/FM3jPHn3Pq763RSXFP2El9KAULAomNHt_T4wfK6ilyj6FelI20Q9Oo4iUsa6C_SSRf1t"
