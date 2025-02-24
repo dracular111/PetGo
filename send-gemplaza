@@ -35,9 +35,9 @@ getgenv().Setting = {
         ["Ninja Raccoon"] = 0.7,
         ["Robber Cat"] = 0.7,
         ["Police Cat"] = 0.6,
-        ["Prison Dog"] = 0.6,
+        ["Prison Dog"] = 0.55,
         ["Prison Monkey"] = 0.55,
-        ["Prison Cow"] = 0.5
+        ["Prison Cow"] = 0.55
     },
     ["Time to remove item booth"] = 5 -- Minutes
 }
