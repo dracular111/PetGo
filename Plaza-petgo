@@ -9,7 +9,7 @@ getgenv().petsGoConfig = {
     -- Plaza hop delay will reset if someone purchase something.
     PLAZA_HOP_DELAY = 20,  -- (minutes) If no one purchase, server hop
     BOOTH_RESET_DELAY = 10,  -- (minutes) force reset booth (Reset RAP Prices)
-    AVOID_USERNAME = {"conmeohpz000", "conmeohpz001", "conmeohpz003", "MarksEvan8773", "BrightSandra4", "squir5ic", "start5ka", "gluti_4bn", "dormi9mk", "BeardCraig2", "ripen7kg", "congahpz009"},  -- serverhop when it finds username
+    AVOID_USERNAME = {"kWSonHal1572", "psQuyZac3891", "SgJaxZac541", "dwNorJon2521", "jnOraHugo2291", "OrawNSam436", "fzTexMax1543", "xiWesDan423", "VvVikEli15726", "jOIraDon1557", "QQZebVic550", "jJGadMoe1924", "NoJonJim684", "MtTimDon5738", "myLynJon531", "RQAxlAce1537", "iUIanJon706", "IdHodMax5739", "UnDanEdd16", "oYHugLeo42", "NNJorAce2338", "IDJayTom4147", "aTClyKim5583", "zOVanCal3773", "ZLZebSid4549", "CwHobCal3065", "XMOleJim1811", "obGadJim408", "KHTaiEli374", "WaNeoDon822", "BNTexHugo1348", "YPGazCal602", "jiTorRon2046", "rZDomDan718", "LqNeoBob2408", "WMZanCal5088", "FYOrrAlf6366", "EnErnRob2107", "MeRoyJoe2781", "JgHamVic4638"},  -- serverhop when it finds username
     
     -- Pets
     SELL_100M_PET = false, SELL_PERCENTAGE_100M = 0.7,
